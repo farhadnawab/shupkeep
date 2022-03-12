@@ -14,6 +14,9 @@ tailwind.config = {
         },
         minWidth: {
           '300px': '300px',
+        },
+        maxHeight: {
+          '600px': '600px',
         }
       }
     }
