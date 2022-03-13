@@ -8,72 +8,148 @@
   <script src="../tailwind.config.js"></script>
   <style type="text/tailwindcss">
     @layer utilities {
-        @font-face {
-            font-family: 'clashdisplay';
-            src: url('../fonts/ClashDisplay-Light.woff2') format('woff2'),
-                url('../fonts/ClashDisplay-Light.woff') format('woff'),
-                url('../fonts/ClashDisplay-Light.ttf') format('truetype');
-                font-weight: 300;
-                font-display: swap;
-                font-style: normal;
-        }
+      @font-face {
+          font-family: 'clashdisplay';
+          src: url('../fonts/ClashDisplay-Light.woff2') format('woff2'),
+              url('../fonts/ClashDisplay-Light.woff') format('woff'),
+              url('../fonts/ClashDisplay-Light.ttf') format('truetype');
+              font-weight: 300;
+              font-display: swap;
+              font-style: normal;
+      }
 
-        @font-face {
-        font-family: 'clashdisplay';
-        src: url('../fonts/ClashDisplay-Regular.woff2') format('woff2'),
-            url('../fonts/ClashDisplay-Regular.woff') format('woff'),
-            url('../fonts/ClashDisplay-Regular.ttf') format('truetype');
-            font-weight: 400;
-            font-display: swap;
-            font-style: normal;
-        }
+      @font-face {
+      font-family: 'clashdisplay';
+      src: url('../fonts/ClashDisplay-Regular.woff2') format('woff2'),
+          url('../fonts/ClashDisplay-Regular.woff') format('woff'),
+          url('../fonts/ClashDisplay-Regular.ttf') format('truetype');
+          font-weight: 400;
+          font-display: swap;
+          font-style: normal;
+      }
 
-        @font-face {
-        font-family: 'clashdisplay';
-        src: url('../fonts/ClashDisplay-Medium.woff2') format('woff2'),
-            url('../fonts/ClashDisplay-Medium.woff') format('woff'),
-            url('../fonts/ClashDisplay-Medium.ttf') format('truetype');
-            font-weight: 500;
-            font-display: swap;
-            font-style: normal;
-        }
+      @font-face {
+      font-family: 'clashdisplay';
+      src: url('../fonts/ClashDisplay-Medium.woff2') format('woff2'),
+          url('../fonts/ClashDisplay-Medium.woff') format('woff'),
+          url('../fonts/ClashDisplay-Medium.ttf') format('truetype');
+          font-weight: 500;
+          font-display: swap;
+          font-style: normal;
+      }
 
-        @font-face {
-        font-family: 'clashdisplay';
-        src: url('../fonts/ClashDisplay-Semibold.woff2') format('woff2'),
-            url('../fonts/ClashDisplay-Semibold.woff') format('woff'),
-            url('../fonts/ClashDisplay-Semibold.ttf') format('truetype');
-            font-weight: 600;
-            font-display: swap;
-            font-style: normal;
-        }
+      @font-face {
+      font-family: 'clashdisplay';
+      src: url('../fonts/ClashDisplay-Semibold.woff2') format('woff2'),
+          url('../fonts/ClashDisplay-Semibold.woff') format('woff'),
+          url('../fonts/ClashDisplay-Semibold.ttf') format('truetype');
+          font-weight: 600;
+          font-display: swap;
+          font-style: normal;
+      }
 
-        @font-face {
-        font-family: 'clashdisplay';
-        src: url('../fonts/ClashDisplay-Bold.woff2') format('woff2'),
-            url('../fonts/ClashDisplay-Bold.woff') format('woff'),
-            url('../fonts/ClashDisplay-Bold.ttf') format('truetype');
-            font-weight: 700;
-            font-display: swap;
-            font-style: normal;
-        }
+      @font-face {
+      font-family: 'clashdisplay';
+      src: url('../fonts/ClashDisplay-Bold.woff2') format('woff2'),
+          url('../fonts/ClashDisplay-Bold.woff') format('woff'),
+          url('../fonts/ClashDisplay-Bold.ttf') format('truetype');
+          font-weight: 700;
+          font-display: swap;
+          font-style: normal;
+      }
 
-        /* custom css */
-        .bg-body {
-          background-image: url('../images/body-bg.png');
-        }
-        .bg-hero {
-          background-image: url('../images/hero-bg.png');
-        }
-        .bg-center-bottom {
-          background-position: center bottom;
-        }
-        
+      /* custom css */
+      .bg-body {
+        background-image: url('../images/body-bg.png');
+      }
+      .bg-hero {
+        background-image: url('../images/hero-bg.png');
+      }
+      .bg-testimonial {
+        background-image: url('../images/testimonial-bg.png');
+      }
+      .bg-section-1 {
+        background-image: url('../images/section-bg1.png');
+      }
+      .bg-black-noise {
+        background-image: url('../images/black-noise-bg.png');
+      }
+      .bg-testimonial-quote {
+        background: linear-gradient(133deg, rgba(238,238,238,20%), rgba(255,255,255,60%));
+        position: relative;
+        z-index: 1;
+      }
+      .bg-testimonial-quote:before {
+        content: "";
+        background-image: url('../images/testimonial-gradient.png');
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
+        width: 900px;
+        height: 900px;
+        display: block;
+        pointer-events: none;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translateX(-50%) translateY(-50%);
+        z-index: -1;
+      }
+      .bg-testimonial-quote.big:before {
+        background-image: url('../images/testimonial-gradient2.png');
+        width: 1200px;
+        height: 1200px;
+      }
+      .bg-center-bottom {
+        background-position: center bottom;
+      }
+      .line-bullet:before {
+        content: "";
+        width: 10px;
+        height: 10px;
+        background: #ffffff;
+        border-radius: 100%;
+        display: block;
+        position: absolute;
+        top: 6px;
+        left: 0;
+      }
+      .line-bullet:after {
+        content: "";
+        width: 1px;
+        height: 100%;
+        background: #fff;
+        display: block;
+        position: absolute;
+        bottom: -6px;
+        left: 4px;
+      }
+      .line-bullet:last-child:after {
+        display: none;
+      }
+      .tick-mark li {
+        display: flex;
+        margin-bottom: 0.5rem;
+      }
+      .tick-mark li:before {
+        content: "";
+        width: 20px;
+        height: 20px;
+        display: block;
+        background-image: url('../images/tick-mark.png');
+        background-repeat: no-repeat;
+        margin-right: 1rem;
+        flex-shrink: 0;
+      }
+
+
     }
   </style>
 </head>
 <body class="font-clash text-third bg-body">
     
+  <div class="overflow-hidden">
+    <!-- Section 1 -->
     <div class="relative bg-hero bg-no-repeat bg-cover bg-center-bottom overflow-hidden h-screen max-h-600px md:max-h-full">
         <div class="relative pt-10 pb-16 sm:pb-24 h-full flex flex-col items-center">
           <img src="../images/hero-object-left.png" class="hidden lg:block absolute top-1/2 transform -translate-y-1/2 left-0 -translate-x-1/2 pointer-events-none" />
@@ -167,43 +243,505 @@
         </div>
     </div>
 
-
     <!-- Section 2 -->
     <div class="relative py-16 sm:py-24 lg:py-32">
+      <div class="mx-auto max-w-md px-4 text-center sm:max-w-3xl sm:px-6 lg:max-w-7xl lg:px-8">
+        <p class="mx-auto max-w-3xl font-semibold text-3xl sm:text-4xl lg:text-6xl">We didn't reinvent the wheel,  just development</p>
+        <p class="mx-auto max-w-3xl mt-5 text-xl">Design as you know it is out the door. Design as you want it just arrived.</p>
+
+        <div class="mt-16">
+          <div class="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
+            <div class="pt-6 px-6 pb-8">
+              <div>
+                <img src="../images/icon-1.svg" class="inline-block" />
+              </div>
+              <h3 class="mt-8 text-base tracking-widest font-semibold uppercase">Subscribe</h3>
+              <p class="mt-5 text-base tracking-wider">Subscribe to a plan & request as many designs as you'd like.</p>
+            </div>
+    
+            <div class="pt-6">
+              <div>
+                <img src="../images/icon-2.svg" class="inline-block" />
+              </div>
+              <h3 class="mt-8 text-base tracking-widest font-semibold uppercase">Code</h3>
+              <p class="mt-5 text-base tracking-wider">Receive your design within a few business days on average, Monday to Friday.</p>
+            </div>
+    
+            <div class="pt-6">
+              <div>
+                <img src="../images/icon-3.svg" class="inline-block" />
+              </div>
+              <h3 class="mt-8 text-base tracking-widest font-semibold uppercase">Deploy</h3>
+              <p class="mt-5 text-base tracking-wider">We'll revise the designs until you're 100% satisfied.</p>
+            </div>
+    
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Section 3 -->
+    <div class="py-16 px-4 sm:py-24 sm:pb-32 sm:px-6 lg:px-8">
+      <div class="max-w-7xl mx-auto py-16 px-4 sm:py-24 sm:px-6 lg:px-8 bg-testimonial rounded-2xl relative">
+        <img src="../images/testimonial-object-left.png" class="hidden lg:block absolute top-0 transform -translate-y-1/2 left-0 -translate-x-1/2 pointer-events-none" />
+        <img src="../images/testimonial-object-right.png" class="hidden lg:block absolute bottom-0 transform translate-y-1/2 right-0 translate-x-1/2 pointer-events-none" />
+
+        <div class="text-center max-w-3xl mx-auto">
+          <img src="../images/orange-quote.svg" class="inline-block" />
+          <p class="mt-8 text-xl font-semibold sm:text-2xl lg:text-4xl">Shupkeep shows that they know the art of subtlety.</p>
+
+          <img src="../images/avatar.png" class="inline-block mt-8" />
+          <p class="mt-3 font-medium text-lg">Sundar Pichai</p>
+          <p>Chief Executive Officer @ Google</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Section 4 -->
+    <div class="relative py-16 sm:py-36 lg:py-64 bg-section-1 bg-center">
+      <img src="../images/cream-curve-top.png" class="absolute top-0 left-0 w-full" />
+      <img src="../images/cream-curve-bottom.png" class="absolute bottom-0 left-0 w-full" />
+
+      <div class="mx-auto max-w-md px-4 sm:max-w-3xl sm:px-6 lg:max-w-7xl lg:px-8">
+        <p class="mx-auto max-w-3xl font-semibold text-3xl sm:text-4xl lg:text-6xl text-center">We didn't reinvent the wheel,  just development</p>
+        <p class="mx-auto max-w-3xl mt-5 text-xl text-center">Design as you know it is out the door. Design as you want it just arrived.</p>
+
+        <div class="mt-16 md:mt-24 lg:mt-32">
+          <div class="flex flex-wrap items-center">
+           
+            <div class="w-full md:w-1/2 md:pr-10 lg:pr-20 mb-20 md:mb-0">
+              <div class="bg-testimonial-quote border border-white rounded-3xl py-20 px-12 relative lg:min-h-535px flex flex-col justify-center items-start">
+                <img src="../images/testimonial-object-left2.png" class="hidden lg:block absolute top-0 transform -translate-y-1/2 left-0 -translate-x-1/2 pointer-events-none" />
+
+                <img src="../images/orange-quote.svg" class="inline-block" />
+                <p class="mt-8 text-xl font-semibold sm:text-2xl lg:text-4xl lg:leading-snug">Code is everything,<br/> and these guys have nailed it.</p>
+
+                <p class="mt-3 font-medium text-lg">Sundar Pichai</p>
+                <p>Chief Executive Officer @ Google</p>
+              </div>
+            </div>
+            <div class="w-full md:w-1/2">
+              <div class="line-bullet relative pl-10 pb-20">
+                <h3 class="text-base tracking-widest font-semibold uppercase">Subscribe</h3>
+                <p class="mt-4 text-base tracking-wider">Subscribe to a plan & request as many designs as you'd like.</p>
+              </div>
+              <div class="line-bullet relative pl-10 pb-20">
+                <h3 class="text-base tracking-widest font-semibold uppercase">Subscribe</h3>
+                <p class="mt-4 text-base tracking-wider">Subscribe to a plan & request as many designs as you'd like.</p>
+              </div>
+              <div class="line-bullet relative pl-10">
+                <h3 class="text-base tracking-widest font-semibold uppercase">Subscribe</h3>
+                <p class="mt-4 text-base tracking-wider">Subscribe to a plan & request as many designs as you'd like.</p>
+              </div>
+            </div>
+    
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Section 5 -->
+    <div class="relative py-16 sm:py-24 lg:py-32">
+      <div class="mx-auto max-w-md px-4 text-center sm:max-w-3xl sm:px-6 lg:max-w-7xl lg:px-8">
+        <p class="mx-auto max-w-3xl font-semibold text-3xl sm:text-4xl lg:text-6xl">Member Benefits</p>
+        <p class="mx-auto max-w-3xl mt-5 text-xl">Design as you know it is out the door. Design as you want it just arrived.</p>
+        <div class="mt-10 text-center">
+          <div class="inline-block relative">
+            <img src="../images/hero-arrow.png" class="absolute left-full top-1/2 transform -translate-y-1/2 ml-8" />
+            <a href="#" class="inline-block py-3 px-8 md:py-5 md:min-w-300px tracking-wider text-base sm:text-lg md:text-xl font-medium rounded-lg text-white bg-third hover:bg-fourth">See Pricing Plans</a>
+          </div>
+        </div>
+
+        <div class="mt-16">
+          <div class="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
+            <div class="pt-6 px-6 pb-8">
+              <div>
+                <img src="../images/icon-1.svg" class="inline-block">
+              </div>
+              <h3 class="mt-8 text-base tracking-widest font-semibold uppercase">Subscribe</h3>
+              <p class="mt-5 text-base tracking-wider">Subscribe to a plan &amp; request as many designs as you'd like.</p>
+            </div>
+    
+            <div class="pt-6">
+              <div>
+                <img src="../images/icon-2.svg" class="inline-block">
+              </div>
+              <h3 class="mt-8 text-base tracking-widest font-semibold uppercase">Code</h3>
+              <p class="mt-5 text-base tracking-wider">Receive your design within a few business days on average, Monday to Friday.</p>
+            </div>
+    
+            <div class="pt-6">
+              <div>
+                <img src="../images/icon-3.svg" class="inline-block">
+              </div>
+              <h3 class="mt-8 text-base tracking-widest font-semibold uppercase">Deploy</h3>
+              <p class="mt-5 text-base tracking-wider">We'll revise the designs until you're 100% satisfied.</p>
+            </div>
+
+            <div class="pt-6 px-6 pb-8">
+              <div>
+                <img src="../images/icon-1.svg" class="inline-block">
+              </div>
+              <h3 class="mt-8 text-base tracking-widest font-semibold uppercase">Subscribe</h3>
+              <p class="mt-5 text-base tracking-wider">Subscribe to a plan &amp; request as many designs as you'd like.</p>
+            </div>
+    
+            <div class="pt-6">
+              <div>
+                <img src="../images/icon-2.svg" class="inline-block">
+              </div>
+              <h3 class="mt-8 text-base tracking-widest font-semibold uppercase">Code</h3>
+              <p class="mt-5 text-base tracking-wider">Receive your design within a few business days on average, Monday to Friday.</p>
+            </div>
+    
+            <div class="pt-6">
+              <div>
+                <img src="../images/icon-3.svg" class="inline-block">
+              </div>
+              <h3 class="mt-8 text-base tracking-widest font-semibold uppercase">Deploy</h3>
+              <p class="mt-5 text-base tracking-wider">We'll revise the designs until you're 100% satisfied.</p>
+            </div>
+    
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Section 6 -->
+    <div class="relative py-16 sm:py-36 lg:py-64 bg-testimonial bg-center">
+      <img src="../images/cream-curve-top.png" class="absolute top-0 left-0 w-full" />
+      <img src="../images/cream-curve-bottom.png" class="absolute bottom-0 left-0 w-full" />
+
+      <div class="mx-auto max-w-md px-4 sm:max-w-3xl sm:px-6 lg:max-w-7xl lg:px-8">
+        <p class="mx-auto max-w-3xl font-semibold text-3xl sm:text-4xl lg:text-6xl text-center">Save time & money</p>
+        <p class="mx-auto max-w-3xl mt-5 text-xl text-center">Design as you know it is out the door. Design as you want it just arrived.</p>
+
+        <div class="mt-16 md:mt-24 lg:mt-32">
+          <div class="flex flex-row-reverse flex-wrap items-center">
+           
+            <div class="w-full md:w-1/2 md:pl-10 lg:pl-20 mb-20 md:mb-0">
+                <img src="../images/person1.png" />
+            </div>
+            <div class="w-full md:w-1/2">
+              <a href="#" class="inline-flex items-center bg-white-alpha-60 rounded-2xl pt-1.5 pb-1 pl-6 pr-8 text-xs md:text-sm font-medium text-third tracking-wider">
+                <img src="../images/star.png" class="mr-2 mb-2"> How We Save You Money
+              </a>
+              <h3 class="mt-5 text-xl font-semibold sm:text-2xl lg:text-4xl lg:leading-snug">Shupkeep shows that they know the art of subtlety.</h3>
+              <p class="mt-3 text-base tracking-wide">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+
+                <ul class="tick-mark mt-5">
+                  <li>Lorem ipsum dolor sit consectetur</li>
+                  <li>Lorem ipsum dolor sit consectetur</li>
+                  <li>Lorem ipsum dolor sit consectetur</li>
+                </ul>
+              </p>
+            </div>
+          </div>
+          <div class="flex flex-row flex-wrap items-center mt-32">
+           
+            <div class="w-full md:w-1/2 md:pr-10 lg:pr-20 mb-20 md:mb-0">
+                <img src="../images/person1.png" />
+            </div>
+            <div class="w-full md:w-1/2">
+              <a href="#" class="inline-flex items-center bg-white-alpha-60 rounded-2xl pt-1.5 pb-1 pl-6 pr-8 text-xs md:text-sm font-medium text-third tracking-wider">
+                <img src="../images/star.png" class="mr-2 mb-2"> How We Save You Money
+              </a>
+              <h3 class="mt-5 text-xl font-semibold sm:text-2xl lg:text-4xl lg:leading-snug">Shupkeep shows that they know the art of subtlety.</h3>
+              <p class="mt-3 text-base tracking-wide">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+
+                <ul class="tick-mark mt-5">
+                  <li>Lorem ipsum dolor sit consectetur</li>
+                  <li>Lorem ipsum dolor sit consectetur</li>
+                  <li>Lorem ipsum dolor sit consectetur</li>
+                </ul>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Testimonial -->
+        <div class="max-w-7xl mx-auto mt-40 py-16 px-4 sm:py-24 sm:px-6 lg:px-8 bg-white rounded-2xl relative">
+          <img src="../images/testimonial-object-left.png" class="hidden lg:block absolute top-0 transform -translate-y-1/2 left-0 -translate-x-1/2 pointer-events-none">
+          <img src="../images/testimonial-object-right.png" class="hidden lg:block absolute bottom-0 transform translate-y-1/2 right-0 translate-x-1/2 pointer-events-none">
+  
+          <div class="text-center max-w-3xl mx-auto">
+            <img src="../images/orange-quote.svg" class="inline-block">
+            <p class="mt-8 text-xl font-semibold sm:text-2xl lg:text-4xl">Shupkeep shows that they know the art of subtlety.</p>
+  
+            <img src="../images/avatar.png" class="inline-block mt-8">
+            <p class="mt-3 font-medium text-lg">Sundar Pichai</p>
+            <p>Chief Executive Officer @ Google</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Section 7 -->
+    <div class="relative py-16 sm:py-24 lg:py-32">
+      <div class="mx-auto max-w-md px-4 text-center sm:max-w-3xl sm:px-6 lg:max-w-7xl lg:px-8">
+        <p class="mx-auto max-w-3xl font-semibold text-3xl sm:text-4xl lg:text-6xl">Latest Projects</p>
+        <p class="mx-auto max-w-3xl mt-5 text-xl">Design as you know it is out the door. Design as you want it just arrived.</p>
+
+        <div class="mt-16">
+          <div class="flex flex-wrap items-center -mx-4">
+           
+            <div class="w-full md:w-1/2 p-4">
+              <img src="../images/latest-project1.png" class="w-full" />
+            </div>
+            <div class="w-full md:w-1/2 p-4">
+              <img src="../images/latest-project2.png" class="w-full" />
+            </div>
+            <div class="w-full md:w-1/2 p-4">
+              <img src="../images/latest-project2.png" class="w-full" />
+            </div>
+            <div class="w-full md:w-1/2 p-4">
+              <img src="../images/latest-project1.png" class="w-full" />
+            </div>
+    
+          </div>
+        </div>
+        <div class="mt-16">
+          <div class="flex flex-wrap items-center justify-between">
+           
+            <a href="#" class="px-2 mx-auto mb-5">
+              <img src="../images/sponsor1.svg" />
+            </a>
+            <a href="#" class="px-2 mx-auto mb-5">
+              <img src="../images/sponsor2.svg" />
+            </a>
+            <a href="#" class="px-2 mx-auto mb-5">
+              <img src="../images/sponsor3.svg" />
+            </a>
+            <a href="#" class="px-2 mx-auto mb-5">
+              <img src="../images/sponsor4.svg" />
+            </a>
+            <a href="#" class="px-2 mx-auto mb-5">
+              <img src="../images/sponsor5.svg" />
+            </a>
+    
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Section 8 -->
+    <div class="relative py-16 sm:py-36 lg:py-64 bg-section-1 bg-center">
+      <img src="../images/cream-curve-top.png" class="absolute top-0 left-0 w-full" />
+      <img src="../images/cream-curve-bottom.png" class="absolute bottom-0 left-0 w-full" />
+
+      <div class="mx-auto max-w-md px-4 sm:max-w-3xl sm:px-6 lg:max-w-7xl lg:px-8">
+        <p class="mx-auto max-w-3xl font-semibold text-3xl sm:text-4xl lg:text-6xl text-center">Task we tackle</p>
+        <p class="mx-auto max-w-3xl mt-5 text-xl text-center">Design as you know it is out the door. Design as you want it just arrived.</p>
+
+        <div class="mt-16 md:mt-24 lg:mt-32">
+          <div class="flex flex-wrap items-center">
+           
+            <div class="w-full">
+              <div class="bg-testimonial-quote big border border-white rounded-3xl py-20 px-12 relative lg:min-h-535px flex flex-col justify-center items-start">
+                <img src="../images/testimonial-object-left2.png" class="hidden lg:block absolute top-0 transform -translate-y-1/2 left-0 -translate-x-1/2 pointer-events-none" />
+                <img src="../images/testimonial-object-left2.png" class="hidden lg:block absolute bottom-0 transform translate-y-1/2 right-0 translate-x-1/2 pointer-events-none" />
+
+                <div class="w-full flex flex-wrap font-semibold tracking-wider uppercase">
+                  <div class="w-full sm:w-1/2 lg:w-1/3 px-5 my-5">
+                    <a href="#" class="block pb-3 border-b border-third">Subscribe</a>
+                  </div>
+                  <div class="w-full sm:w-1/2 lg:w-1/3 px-5 my-5">
+                    <a href="#" class="block pb-3 border-b border-third">Subscribe</a>
+                  </div>
+                  <div class="w-full sm:w-1/2 lg:w-1/3 px-5 my-5">
+                    <a href="#" class="block pb-3 border-b border-third">Subscribe</a>
+                  </div>
+                  <div class="w-full sm:w-1/2 lg:w-1/3 px-5 my-5">
+                    <a href="#" class="block pb-3 border-b border-third">Subscribe</a>
+                  </div>
+                  <div class="w-full sm:w-1/2 lg:w-1/3 px-5 my-5">
+                    <a href="#" class="block pb-3 border-b border-third">Subscribe</a>
+                  </div>
+                  <div class="w-full sm:w-1/2 lg:w-1/3 px-5 my-5">
+                    <a href="#" class="block pb-3 border-b border-third">Subscribe</a>
+                  </div>
+                  <div class="w-full sm:w-1/2 lg:w-1/3 px-5 my-5">
+                    <a href="#" class="block pb-3 border-b border-third">Subscribe</a>
+                  </div>
+                  <div class="w-full sm:w-1/2 lg:w-1/3 px-5 my-5">
+                    <a href="#" class="block pb-3 border-b border-third">Subscribe</a>
+                  </div>
+                  <div class="w-full sm:w-1/2 lg:w-1/3 px-5 my-5">
+                    <a href="#" class="block pb-3 border-b border-third">Subscribe</a>
+                  </div>
+                  <div class="w-full sm:w-1/2 lg:w-1/3 px-5 my-5">
+                    <a href="#" class="block pb-3 border-b border-third">Subscribe</a>
+                  </div>
+                  <div class="w-full sm:w-1/2 lg:w-1/3 px-5 my-5">
+                    <a href="#" class="block pb-3 border-b border-third">Subscribe</a>
+                  </div>
+                  <div class="w-full sm:w-1/2 lg:w-1/3 px-5 my-5">
+                    <a href="#" class="block pb-3 border-b border-third">Subscribe</a>
+                  </div>
+                  <div class="w-full sm:w-1/2 lg:w-1/3 px-5 my-5">
+                    <a href="#" class="block pb-3 border-b border-third">Subscribe</a>
+                  </div>
+                  <div class="w-full sm:w-1/2 lg:w-1/3 px-5 my-5">
+                    <a href="#" class="block pb-3 border-b border-third">Subscribe</a>
+                  </div>
+                  <div class="w-full sm:w-1/2 lg:w-1/3 px-5 my-5">
+                    <a href="#" class="block pb-3 border-b border-third">Subscribe</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+    
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Section 9 -->
+    <div class="relative py-16 sm:py-24 lg:py-32">
+      <div class="mx-auto max-w-md px-4 sm:max-w-3xl sm:px-6 lg:max-w-7xl lg:px-8">
+        <!-- Header -->
+        <p class="mx-auto max-w-2xl font-semibold text-3xl sm:text-4xl lg:text-6xl text-center">Only one plan that works for everyone</p>
+        <p class="mx-auto max-w-3xl mt-5 text-xl text-center">Design as you know it is out the door. Design as you want it just arrived.</p>
+
+        <!-- Pricing -->
+        <div class="bg-white py-16 px-14 rounded-3xl mt-12 mx-auto max-w-3xl">
+          <div class="flex justify-between">
+            <h3 class="text-xl font-semibold sm:text-2xl lg:text-4xl">Unlimited Plan</h3>
+            <h4 class="font-semibold sm:text-xl lg:text-2xl">$2,499/m</h4>
+          </div>
+          <hr class="border-third opacity-20 mt-3" />
+
+          <h3 class="mt-8 text-base tracking-widest font-semibold uppercase">About The Plan</h3>
+          <p class="mt-2 text-base tracking-wider">More features, more requests, and expanded benefits to service higher demands.</p>
+
+          <h3 class="mt-8 text-base tracking-widest font-semibold uppercase">What’s Included</h3>
+
+          <div class="mt-2 flex justify-between">
+            <ul class="list-disc pl-4">
+              <li>Native source files</li>
+              <li>Unlimited requests</li>
+              <li>Unlimited revisions</li>
+              <li>Unlimited brands</li>
+            </ul>
+            <ul class="list-disc pl-4">
+              <li>Native source files</li>
+              <li>Unlimited requests</li>
+              <li>Unlimited revisions</li>
+              <li>Unlimited brands</li>
+            </ul>
+            <ul class="list-disc pl-4">
+              <li>Native source files</li>
+              <li>Unlimited requests</li>
+              <li>Unlimited revisions</li>
+              <li>Unlimited brands</li>
+            </ul>
+          </div>
+
+          <!-- Button -->
+          <a href="#" class="block text-center mt-10 py-3 px-8 md:py-5 md:min-w-300px tracking-wider text-base sm:text-lg md:text-xl font-medium rounded-lg text-white bg-third hover:bg-fourth">Get Started</a>
+        </div>
+
+        <!-- Accordion -->
+        <div class="max-w-3xl mx-auto mt-24">
+          <dl class="mt-6 space-y-6 divide-y divide-gray-200">
+            <div class="pt-6">
+              <dt>
+                <!-- Expand/collapse question button -->
+                <button type="button" class="text-left w-full flex justify-between items-start font-medium text-2xl hover:text-fourth" aria-controls="faq-0" aria-expanded="false">
+                  <span>Is it really unlimited requests?</span>
+                  <span class="ml-6 text-3xl">
+                    +
+                  </span>
+                </button>
+              </dt>
+              <dd class="mt-2 pr-12 hidden" id="faq-0">
+                <p>I don&#039;t know, but the flag is a big plus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas cupiditate laboriosam fugiat.</p>
+              </dd>
+            </div>
+    
+            <!-- More questions... -->
+            <div class="pt-6">
+              <dt>
+                <!-- Expand/collapse question button -->
+                <button type="button" class="text-left w-full flex justify-between items-start font-medium text-2xl hover:text-fourth" aria-controls="faq-1" aria-expanded="false">
+                  <span>How fast will I receive my site?</span>
+                  <span class="ml-6 text-3xl">
+                    +
+                  </span>
+                </button>
+              </dt>
+              <dd class="mt-2 pr-12 hidden" id="faq-1">
+                <p>I don&#039;t know, but the flag is a big plus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas cupiditate laboriosam fugiat.</p>
+              </dd>
+            </div>
+          </dl>
+        </div>
+      </div>
+    </div>
+
+    <!-- Section 10 -->
+    <div class="py-16 px-4 sm:py-24 sm:px-6 lg:px-8">
+      <div class="max-w-7xl mx-auto py-16 px-4 sm:py-24 sm:px-6 lg:px-8 bg-testimonial rounded-2xl relative">
+        <img src="../images/testimonial-object-left.png" class="hidden lg:block absolute top-0 transform -translate-y-1/2 left-0 -translate-x-1/2 pointer-events-none" />
+        <img src="../images/testimonial-object-right.png" class="hidden lg:block absolute bottom-0 transform translate-y-1/2 right-0 translate-x-1/2 pointer-events-none" />
+
+        <div class="text-center max-w-3xl mx-auto">
+          <img src="../images/orange-quote.svg" class="inline-block" />
+          <p class="mt-8 text-xl font-semibold sm:text-2xl lg:text-4xl">Shupkeep shows that they know the art of subtlety.</p>
+
+          <img src="../images/avatar.png" class="inline-block mt-8" />
+          <p class="mt-3 font-medium text-lg">Sundar Pichai</p>
+          <p>Chief Executive Officer @ Google</p>
+        </div>
+      </div>
+    </div>
+
+    <footer class="relative bg-black-noise bg-center text-white">
+      <div class="py-16 sm:py-24 lg:py-32 lg:pt-56">
+        <img src="../images/cream-curve-top.png" class="absolute top-0 left-0 w-full">
+
         <div class="mx-auto max-w-md px-4 text-center sm:max-w-3xl sm:px-6 lg:max-w-7xl lg:px-8">
           <p class="mx-auto max-w-3xl font-semibold text-3xl sm:text-4xl lg:text-6xl">We didn't reinvent the wheel,  just development</p>
-          <p class="mx-auto max-w-3xl mt-5 text-xl">Design as you know it is out the door. Design as you want it just arrived.</p>
-
-          <div class="mt-16">
-            <div class="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
-              <div class="pt-6 px-6 pb-8">
-                <div>
-                  <img src="../images/icon-1.svg" class="inline-block" />
-                </div>
-                <h3 class="mt-8 text-base tracking-widest font-semibold uppercase">Subscribe</h3>
-                <p class="mt-5 text-base tracking-wider">Subscribe to a plan & request as many designs as you'd like.</p>
-              </div>
-      
-              <div class="pt-6">
-                <div>
-                  <img src="../images/icon-2.svg" class="inline-block" />
-                </div>
-                <h3 class="mt-8 text-base tracking-widest font-semibold uppercase">Code</h3>
-                <p class="mt-5 text-base tracking-wider">Receive your design within a few business days on average, Monday to Friday.</p>
-              </div>
-      
-              <div class="pt-6">
-                <div>
-                  <img src="../images/icon-3.svg" class="inline-block" />
-                </div>
-                <h3 class="mt-8 text-base tracking-widest font-semibold uppercase">Deploy</h3>
-                <p class="mt-5 text-base tracking-wider">We'll revise the designs until you're 100% satisfied.</p>
-              </div>
-      
+          <p class="mx-auto max-w-3xl mt-5 text-xl opacity-75">Design as you know it is out the door. Design as you want it just arrived.</p>
+          <div class="mt-10 text-center">
+            <div class="inline-block relative">
+              <img src="../images/hero-arrow2.png" class="absolute left-full top-1/2 transform -translate-y-1/2 ml-8" />
+              <a href="#" class="inline-block py-3 px-8 md:py-5 md:min-w-300px tracking-wider text-base sm:text-lg md:text-xl font-medium rounded-lg text-third bg-white hover:bg-fourth hover:text-white">Get Started</a>
             </div>
           </div>
         </div>
       </div>
-          
+
+      <hr class="border-white opacity-20" />
+
+      <div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 md:flex md:items-center md:justify-between lg:px-8 text-sm sm:text-base lg:text-lg font-medium">
+        <div class="flex justify-center space-x-6 md:order-2 opacity-80">
+          <a href="#" class="text-white hover:text-fourth">
+            Link 1
+          </a>
+          <a href="#" class="text-white hover:text-fourth">
+            Link 2
+          </a>
+          <a href="#" class="text-white hover:text-fourth">
+            Link 3
+          </a>
+          <a href="#" class="text-white hover:text-fourth">
+            Link 4
+          </a>
+          <a href="#" class="text-white hover:text-fourth">
+            Link 5
+          </a>
+        </div>
+        <div class="mt-8 md:mt-0 md:order-1">
+          <p class="text-center opacity-60">&copy; 2022 Shupkeep, Inc. All Rights Reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+  </div>
 </body>
 </html>
