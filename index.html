@@ -4,6 +4,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+  <!-- AOS CSS -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+  <!-- Tailwind CSS -->
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="../tailwind.config.js"></script>
   <style type="text/tailwindcss">
@@ -151,15 +155,15 @@
   <div class="overflow-hidden">
     <!-- Section 1 -->
     <div class="relative bg-hero bg-no-repeat bg-cover bg-center-bottom overflow-hidden h-screen max-h-600px md:max-h-full">
-        <div class="relative pt-10 pb-16 sm:pb-24 h-full flex flex-col items-center">
-          <img src="../images/hero-object-left.png" class="hidden lg:block absolute top-1/2 transform -translate-y-1/2 left-0 -translate-x-1/2 pointer-events-none" />
-          <img src="../images/hero-object-right.png" class="hidden lg:block absolute bottom-0 transform right-0 translate-x-1/2 pointer-events-none" />
+        <div class="relative pt-5 pb-16 md:pt-10 md:pb-24 h-full flex flex-col items-center">
+          <img src="../images/hero-object-left.png" class="hidden lg:block absolute top-24 left-0 -ml-52 pointer-events-none" data-aos="fade-right" data-aos-delay="500" data-aos-duration="1000" data-aos-offset="-1000" />
+          <img src="../images/hero-object-right.png" class="hidden lg:block absolute bottom-0 right-0 -mr-48 pointer-events-none" data-aos="fade-left" data-aos-delay="500" data-aos-duration="1000" data-aos-offset="-1000" />
 
           <div class="w-full">
             <div class="max-w-7xl mx-auto px-4 sm:px-6">
               <nav class="relative flex items-center justify-between" aria-label="Global">
                 <!-- Logo -->
-                <div>
+                <div data-aos="fade-right">
                     <a href="#">
                         <span class="sr-only">devuchi</span>
                         <img class="h-16" src="../images/black-logo-nobg.svg" alt="">
@@ -167,7 +171,7 @@
                 </div>
 
                 <!-- Links -->
-                <div class="hidden md:space-x-10 md:block">
+                <div class="hidden md:space-x-10 md:block" data-aos="fade-left" data-aos-delay="50">
                     <a href="#" class="font-medium text-lg hover:text-fourth">Product</a>
         
                     <a href="#" class="font-medium text-lg hover:text-fourth">Features</a>
@@ -177,7 +181,7 @@
                     <a href="#" class="font-medium text-lg hover:text-fourth">Company</a>
                 </div>
 
-                <div class="flex items-center md:hidden">
+                <div class="flex items-center md:hidden" data-aos="fade-left" data-aos-delay="50">
                     <button type="button" class="bg-gray-50 rounded-md p-2 inline-flex items-center justify-center text-third hover:text-white hover:bg-fourth focus:outline-none" aria-expanded="false">
                         <span class="sr-only">Open main menu</span>
                         <!-- Heroicon name: outline/menu -->
@@ -225,16 +229,16 @@
       
           <main class="flex-grow mx-auto max-w-7xl px-4 flex justify-center items-center">
             <div class="text-center max-w-4xl mx-auto">
-              <a href="#" class="inline-flex items-center bg-white-alpha-60 rounded-2xl pt-1.5 pb-1 pl-6 pr-8 text-xs md:text-sm font-medium text-third tracking-wider">
+              <a href="#" class="inline-flex items-center bg-white-alpha-60 rounded-2xl pt-1.5 pb-1 pl-6 pr-8 text-xs md:text-sm font-medium text-third tracking-wider" data-aos="fade-in" data-aos-delay="150" data-aos-offset="-1000">
                 <img src="../images/star.png" class="mr-2 mb-2" /> Take a look at our new projects
               </a>
-              <h1 class="mt-5 text-3xl tracking-tight font-semibold sm:text-5xl md:text-8xl">
+              <h1 class="mt-5 text-3xl tracking-tight font-semibold sm:text-5xl md:text-8xl" data-aos="fade-up" data-aos-delay="200" data-aos-offset="-1000">
                 Lorem Ipsum Sit Sote De Dolce
               </h1>
-              <p class="mt-3 md:mt-5 text-base sm:text-lg md:text-xl">Premium shopify development subscriptions to grow your business.</p>
-              <div class="mt-10 text-center">
+              <p class="mt-3 md:mt-5 text-base sm:text-lg md:text-xl" data-aos="fade-up" data-aos-delay="250" data-aos-offset="-1000">Premium shopify development subscriptions to grow your business.</p>
+              <div class="mt-10 text-center" data-aos="fade-up" data-aos-delay="300" data-aos-offset="-1000">
                 <div class="inline-block relative">
-                  <img src="../images/hero-arrow.png" class="absolute left-full top-1/2 transform -translate-y-1/2 ml-8" />
+                  <img src="../images/hero-arrow.png" class="absolute left-full top-1/2 -mt-10 ml-8" data-aos="fade-left" data-aos-delay="1000" data-aos-duration="1000" data-aos-offset="-1000" />
                   <a href="#" class="inline-block py-3 px-8 md:py-5 md:min-w-300px tracking-wider text-base sm:text-lg md:text-xl font-medium rounded-lg text-white bg-third hover:bg-fourth">See Pricing Plans</a>
                 </div>
               </div>
@@ -244,7 +248,7 @@
     </div>
 
     <!-- Section 2 -->
-    <div class="relative py-16 sm:py-24 lg:py-32">
+    <div class="relative pt-24 pb-16 sm:py-24 lg:py-32" data-aos="fade-up" data-aos-duration="1000">
       <div class="mx-auto max-w-md px-4 text-center sm:max-w-3xl sm:px-6 lg:max-w-7xl lg:px-8">
         <p class="mx-auto max-w-3xl font-semibold text-3xl sm:text-4xl lg:text-6xl">We didn't reinvent the wheel,  just development</p>
         <p class="mx-auto max-w-3xl mt-5 text-xl">Design as you know it is out the door. Design as you want it just arrived.</p>
@@ -281,24 +285,24 @@
     </div>
     
     <!-- Section 3 -->
-    <div class="py-16 px-4 sm:py-24 sm:pb-32 sm:px-6 lg:px-8">
+    <div class="pt-16 pb-24 px-4 sm:py-24 sm:pb-32 sm:px-6 lg:px-8" data-aos="fade-in" data-aos-duration="1000" data-aos-offset="100">
       <div class="max-w-7xl mx-auto py-16 px-4 sm:py-24 sm:px-6 lg:px-8 bg-testimonial rounded-2xl relative">
-        <img src="../images/testimonial-object-left.png" class="hidden lg:block absolute top-0 transform -translate-y-1/2 left-0 -translate-x-1/2 pointer-events-none" />
-        <img src="../images/testimonial-object-right.png" class="hidden lg:block absolute bottom-0 transform translate-y-1/2 right-0 translate-x-1/2 pointer-events-none" />
+        <img src="../images/testimonial-object-left.png" class="hidden lg:block absolute top-0 left-0 -mt-12 -ml-12 pointer-events-none" data-aos="fade-right" data-aos-delay="350" data-aos-duration="1000" data-aos-offset="400" />
+        <img src="../images/testimonial-object-right.png" class="hidden lg:block absolute bottom-0 right-0 -mb-14 -mr-14 pointer-events-none" data-aos="fade-left" data-aos-delay="350" data-aos-duration="1000" data-aos-offset="300" />
 
         <div class="text-center max-w-3xl mx-auto">
-          <img src="../images/orange-quote.svg" class="inline-block" />
-          <p class="mt-8 text-xl font-semibold sm:text-2xl lg:text-4xl">Shupkeep shows that they know the art of subtlety.</p>
+          <img src="../images/orange-quote.svg" class="inline-block" data-aos="zoom-in" data-aos-delay="100" />
+          <p class="mt-8 text-xl font-semibold sm:text-2xl lg:text-4xl" data-aos="fade-up" data-aos-delay="150">Shupkeep shows that they know the art of subtlety.</p>
 
-          <img src="../images/avatar.png" class="inline-block mt-8" />
-          <p class="mt-3 font-medium text-lg">Sundar Pichai</p>
-          <p>Chief Executive Officer @ Google</p>
+          <img src="../images/avatar.png" class="inline-block mt-8" data-aos="fade-up" data-aos-delay="200" />
+          <p class="mt-3 font-medium text-lg" data-aos="fade-up" data-aos-delay="250">Sundar Pichai</p>
+          <p data-aos="fade-up" data-aos-delay="300">Chief Executive Officer @ Google</p>
         </div>
       </div>
     </div>
 
     <!-- Section 4 -->
-    <div class="relative py-16 sm:py-36 lg:py-64 bg-section-1 bg-center">
+    <div class="relative py-24 sm:py-36 lg:py-64 bg-section-1 bg-center" data-aos="fade-up" data-aos-duration="1000" data-aos-offset="200">
       <img src="../images/cream-curve-top.png" class="absolute top-0 left-0 w-full" />
       <img src="../images/cream-curve-bottom.png" class="absolute bottom-0 left-0 w-full" />
 
@@ -310,7 +314,7 @@
           <div class="flex flex-wrap items-center">
            
             <div class="w-full md:w-1/2 md:pr-10 lg:pr-20 mb-20 md:mb-0">
-              <div class="bg-testimonial-quote border border-white rounded-3xl py-20 px-12 relative lg:min-h-535px flex flex-col justify-center items-start">
+              <div class="bg-testimonial-quote border border-white rounded-3xl py-20 px-12 relative lg:min-h-535px flex flex-col justify-center items-start" data-aos="fade-in" data-aos-duration="1000" data-aos-delay="100">
                 <img src="../images/testimonial-object-left2.png" class="hidden lg:block absolute top-0 transform -translate-y-1/2 left-0 -translate-x-1/2 pointer-events-none" />
 
                 <img src="../images/orange-quote.svg" class="inline-block" />
@@ -321,15 +325,15 @@
               </div>
             </div>
             <div class="w-full md:w-1/2">
-              <div class="line-bullet relative pl-10 pb-20">
+              <div class="line-bullet relative pl-10 pb-20" data-aos="fade-left" data-aos-delay="100">
                 <h3 class="text-base tracking-widest font-semibold uppercase">Subscribe</h3>
                 <p class="mt-4 text-base tracking-wider">Subscribe to a plan & request as many designs as you'd like.</p>
               </div>
-              <div class="line-bullet relative pl-10 pb-20">
+              <div class="line-bullet relative pl-10 pb-20" data-aos="fade-left" data-aos-delay="150">
                 <h3 class="text-base tracking-widest font-semibold uppercase">Subscribe</h3>
                 <p class="mt-4 text-base tracking-wider">Subscribe to a plan & request as many designs as you'd like.</p>
               </div>
-              <div class="line-bullet relative pl-10">
+              <div class="line-bullet relative pl-10" data-aos="fade-left" data-aos-delay="200">
                 <h3 class="text-base tracking-widest font-semibold uppercase">Subscribe</h3>
                 <p class="mt-4 text-base tracking-wider">Subscribe to a plan & request as many designs as you'd like.</p>
               </div>
@@ -341,20 +345,20 @@
     </div>
 
     <!-- Section 5 -->
-    <div class="relative py-16 sm:py-24 lg:py-32">
+    <div class="relative py-24 lg:py-32" data-aos="fade-up" data-aos-duration="1000" data-aos-offset="200">
       <div class="mx-auto max-w-md px-4 text-center sm:max-w-3xl sm:px-6 lg:max-w-7xl lg:px-8">
         <p class="mx-auto max-w-3xl font-semibold text-3xl sm:text-4xl lg:text-6xl">Member Benefits</p>
         <p class="mx-auto max-w-3xl mt-5 text-xl">Design as you know it is out the door. Design as you want it just arrived.</p>
         <div class="mt-10 text-center">
           <div class="inline-block relative">
-            <img src="../images/hero-arrow.png" class="absolute left-full top-1/2 transform -translate-y-1/2 ml-8" />
+            <img src="../images/hero-arrow.png" class="absolute left-full top-1/2 -mt-10 ml-8" data-aos="fade-left" data-aos-delay="1000" data-aos-duration="1000" />
             <a href="#" class="inline-block py-3 px-8 md:py-5 md:min-w-300px tracking-wider text-base sm:text-lg md:text-xl font-medium rounded-lg text-white bg-third hover:bg-fourth">See Pricing Plans</a>
           </div>
         </div>
 
         <div class="mt-16">
           <div class="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
-            <div class="pt-6 px-6 pb-8">
+            <div class="pt-6 px-6 pb-8" data-aos="fade-right" data-aos-delay="100" >
               <div>
                 <img src="../images/icon-1.svg" class="inline-block">
               </div>
@@ -362,7 +366,7 @@
               <p class="mt-5 text-base tracking-wider">Subscribe to a plan &amp; request as many designs as you'd like.</p>
             </div>
     
-            <div class="pt-6">
+            <div class="pt-6" data-aos="fade-right" data-aos-delay="150">
               <div>
                 <img src="../images/icon-2.svg" class="inline-block">
               </div>
@@ -370,7 +374,7 @@
               <p class="mt-5 text-base tracking-wider">Receive your design within a few business days on average, Monday to Friday.</p>
             </div>
     
-            <div class="pt-6">
+            <div class="pt-6" data-aos="fade-right" data-aos-delay="250">
               <div>
                 <img src="../images/icon-3.svg" class="inline-block">
               </div>
@@ -378,7 +382,7 @@
               <p class="mt-5 text-base tracking-wider">We'll revise the designs until you're 100% satisfied.</p>
             </div>
 
-            <div class="pt-6 px-6 pb-8">
+            <div class="pt-6 px-6 pb-8" data-aos="fade-right" data-aos-delay="350">
               <div>
                 <img src="../images/icon-1.svg" class="inline-block">
               </div>
@@ -386,7 +390,7 @@
               <p class="mt-5 text-base tracking-wider">Subscribe to a plan &amp; request as many designs as you'd like.</p>
             </div>
     
-            <div class="pt-6">
+            <div class="pt-6" data-aos="fade-right" data-aos-delay="450">
               <div>
                 <img src="../images/icon-2.svg" class="inline-block">
               </div>
@@ -394,7 +398,7 @@
               <p class="mt-5 text-base tracking-wider">Receive your design within a few business days on average, Monday to Friday.</p>
             </div>
     
-            <div class="pt-6">
+            <div class="pt-6" data-aos="fade-right" data-aos-delay="550">
               <div>
                 <img src="../images/icon-3.svg" class="inline-block">
               </div>
@@ -408,7 +412,7 @@
     </div>
 
     <!-- Section 6 -->
-    <div class="relative py-16 sm:py-36 lg:py-64 bg-testimonial bg-center">
+    <div class="relative py-24 sm:py-36 lg:py-64 bg-testimonial bg-center">
       <img src="../images/cream-curve-top.png" class="absolute top-0 left-0 w-full" />
       <img src="../images/cream-curve-bottom.png" class="absolute bottom-0 left-0 w-full" />
 
@@ -419,7 +423,7 @@
         <div class="mt-16 md:mt-24 lg:mt-32">
           <div class="flex flex-row-reverse flex-wrap items-center">
            
-            <div class="w-full md:w-1/2 md:pl-10 lg:pl-20 mb-20 md:mb-0">
+            <div class="w-full md:w-1/2 md:pl-10 lg:pl-20 mb-10 md:mb-0" data-aos="fade-left" data-aos-duration="1000" data-aos-offset="200">
                 <img src="../images/person1.png" />
             </div>
             <div class="w-full md:w-1/2">
@@ -438,9 +442,9 @@
               </p>
             </div>
           </div>
-          <div class="flex flex-row flex-wrap items-center mt-32">
+          <div class="flex flex-row flex-wrap items-center mt-16 sm:mt-24 lg:mt-32">
            
-            <div class="w-full md:w-1/2 md:pr-10 lg:pr-20 mb-20 md:mb-0">
+            <div class="w-full md:w-1/2 md:pr-10 lg:pr-20 mb-10 md:mb-0" data-aos="fade-right" data-aos-duration="1000" data-aos-offset="200">
                 <img src="../images/person1.png" />
             </div>
             <div class="w-full md:w-1/2">
@@ -462,17 +466,17 @@
         </div>
 
         <!-- Testimonial -->
-        <div class="max-w-7xl mx-auto mt-40 py-16 px-4 sm:py-24 sm:px-6 lg:px-8 bg-white rounded-2xl relative">
-          <img src="../images/testimonial-object-left.png" class="hidden lg:block absolute top-0 transform -translate-y-1/2 left-0 -translate-x-1/2 pointer-events-none">
-          <img src="../images/testimonial-object-right.png" class="hidden lg:block absolute bottom-0 transform translate-y-1/2 right-0 translate-x-1/2 pointer-events-none">
+        <div class="max-w-7xl mx-auto mt-20 md:mt-32 lg:mt-40 py-16 px-4 sm:py-24 sm:px-6 lg:px-8 bg-white rounded-2xl relative">
+          <img src="../images/testimonial-object-left.png" class="hidden lg:block absolute top-0 left-0 -mt-12 -ml-12 pointer-events-none" data-aos="fade-right" data-aos-delay="350" data-aos-duration="1000" data-aos-offset="400" />
+          <img src="../images/testimonial-object-right.png" class="hidden lg:block absolute bottom-0 right-0 -mb-14 -mr-14 pointer-events-none" data-aos="fade-left" data-aos-delay="350" data-aos-duration="1000" data-aos-offset="300" />
   
           <div class="text-center max-w-3xl mx-auto">
-            <img src="../images/orange-quote.svg" class="inline-block">
-            <p class="mt-8 text-xl font-semibold sm:text-2xl lg:text-4xl">Shupkeep shows that they know the art of subtlety.</p>
+            <img src="../images/orange-quote.svg" class="inline-block" data-aos="zoom-in" data-aos-delay="100">
+            <p class="mt-8 text-xl font-semibold sm:text-2xl lg:text-4xl" data-aos="fade-up" data-aos-delay="150">Shupkeep shows that they know the art of subtlety.</p>
   
-            <img src="../images/avatar.png" class="inline-block mt-8">
-            <p class="mt-3 font-medium text-lg">Sundar Pichai</p>
-            <p>Chief Executive Officer @ Google</p>
+            <img src="../images/avatar.png" class="inline-block mt-8" data-aos="fade-up" data-aos-delay="200" />
+            <p class="mt-3 font-medium text-lg" data-aos="fade-up" data-aos-delay="250">Sundar Pichai</p>
+            <p data-aos="fade-up" data-aos-delay="300">Chief Executive Officer @ Google</p>
           </div>
         </div>
 
@@ -480,7 +484,7 @@
     </div>
 
     <!-- Section 7 -->
-    <div class="relative py-16 sm:py-24 lg:py-32">
+    <div class="relative py-24 lg:py-32">
       <div class="mx-auto max-w-md px-4 text-center sm:max-w-3xl sm:px-6 lg:max-w-7xl lg:px-8">
         <p class="mx-auto max-w-3xl font-semibold text-3xl sm:text-4xl lg:text-6xl">Latest Projects</p>
         <p class="mx-auto max-w-3xl mt-5 text-xl">Design as you know it is out the door. Design as you want it just arrived.</p>
@@ -488,16 +492,16 @@
         <div class="mt-16">
           <div class="flex flex-wrap items-center -mx-4">
            
-            <div class="w-full md:w-1/2 p-4">
+            <div class="w-full md:w-1/2 p-4" data-aos="fade-in-up" data-aos-duration="1000" data-aos-offset="200" data-aos-delay="100">
               <img src="../images/latest-project1.png" class="w-full" />
             </div>
-            <div class="w-full md:w-1/2 p-4">
+            <div class="w-full md:w-1/2 p-4" data-aos="fade-in-up" data-aos-duration="1000" data-aos-offset="200" data-aos-delay="200">
               <img src="../images/latest-project2.png" class="w-full" />
             </div>
-            <div class="w-full md:w-1/2 p-4">
+            <div class="w-full md:w-1/2 p-4" data-aos="fade-in-up" data-aos-duration="1000" data-aos-offset="200" data-aos-delay="300">
               <img src="../images/latest-project2.png" class="w-full" />
             </div>
-            <div class="w-full md:w-1/2 p-4">
+            <div class="w-full md:w-1/2 p-4" data-aos="fade-in-up" data-aos-duration="1000" data-aos-offset="200" data-aos-delay="400">
               <img src="../images/latest-project1.png" class="w-full" />
             </div>
     
@@ -529,7 +533,7 @@
     </div>
 
     <!-- Section 8 -->
-    <div class="relative py-16 sm:py-36 lg:py-64 bg-section-1 bg-center">
+    <div class="relative py-24 sm:py-36 lg:py-64 bg-section-1 bg-center" data-aos="fade-up" data-aos-duration="1000" data-aos-offset="200">
       <img src="../images/cream-curve-top.png" class="absolute top-0 left-0 w-full" />
       <img src="../images/cream-curve-bottom.png" class="absolute bottom-0 left-0 w-full" />
 
@@ -601,14 +605,14 @@
     </div>
 
     <!-- Section 9 -->
-    <div class="relative py-16 sm:py-24 lg:py-32">
+    <div class="relative py-24 lg:py-32">
       <div class="mx-auto max-w-md px-4 sm:max-w-3xl sm:px-6 lg:max-w-7xl lg:px-8">
         <!-- Header -->
         <p class="mx-auto max-w-2xl font-semibold text-3xl sm:text-4xl lg:text-6xl text-center">Only one plan that works for everyone</p>
         <p class="mx-auto max-w-3xl mt-5 text-xl text-center">Design as you know it is out the door. Design as you want it just arrived.</p>
 
         <!-- Pricing -->
-        <div class="bg-white py-16 px-14 rounded-3xl mt-12 mx-auto max-w-3xl">
+        <div class="bg-white py-16 px-14 rounded-3xl mt-12 mx-auto max-w-3xl" data-aos="flip-right" data-aos-duration="1000" data-aos-offset="200">
           <div class="flex justify-between">
             <h3 class="text-xl font-semibold sm:text-2xl lg:text-4xl">Unlimited Plan</h3>
             <h4 class="font-semibold sm:text-xl lg:text-2xl">$2,499/m</h4>
@@ -646,7 +650,7 @@
         </div>
 
         <!-- Accordion -->
-        <div class="max-w-3xl mx-auto mt-24">
+        <div class="max-w-3xl mx-auto mt-10 md:mt-16 lg:mt-24">
           <dl class="mt-6 space-y-6 divide-y divide-gray-200">
             <div class="pt-6">
               <dt>
@@ -684,24 +688,24 @@
     </div>
 
     <!-- Section 10 -->
-    <div class="py-16 px-4 sm:py-24 sm:px-6 lg:px-8">
+    <div class="pb-24 px-4 sm:py-24 sm:px-6 lg:px-8">
       <div class="max-w-7xl mx-auto py-16 px-4 sm:py-24 sm:px-6 lg:px-8 bg-testimonial rounded-2xl relative">
-        <img src="../images/testimonial-object-left.png" class="hidden lg:block absolute top-0 transform -translate-y-1/2 left-0 -translate-x-1/2 pointer-events-none" />
-        <img src="../images/testimonial-object-right.png" class="hidden lg:block absolute bottom-0 transform translate-y-1/2 right-0 translate-x-1/2 pointer-events-none" />
+        <img src="../images/testimonial-object-left.png" class="hidden lg:block absolute top-0 left-0 -mt-12 -ml-12 pointer-events-none" data-aos="fade-right" data-aos-delay="350" data-aos-duration="1000" data-aos-offset="400" />
+        <img src="../images/testimonial-object-right.png" class="hidden lg:block absolute bottom-0 right-0 -mb-14 -mr-14 pointer-events-none" data-aos="fade-left" data-aos-delay="350" data-aos-duration="1000" data-aos-offset="300" />
 
         <div class="text-center max-w-3xl mx-auto">
-          <img src="../images/orange-quote.svg" class="inline-block" />
-          <p class="mt-8 text-xl font-semibold sm:text-2xl lg:text-4xl">Shupkeep shows that they know the art of subtlety.</p>
+          <img src="../images/orange-quote.svg" class="inline-block" data-aos="zoom-in" data-aos-delay="100" />
+          <p class="mt-8 text-xl font-semibold sm:text-2xl lg:text-4xl" data-aos="fade-up" data-aos-delay="150">Shupkeep shows that they know the art of subtlety.</p>
 
-          <img src="../images/avatar.png" class="inline-block mt-8" />
-          <p class="mt-3 font-medium text-lg">Sundar Pichai</p>
-          <p>Chief Executive Officer @ Google</p>
+          <img src="../images/avatar.png" class="inline-block mt-8" data-aos="fade-up" data-aos-delay="200" />
+          <p class="mt-3 font-medium text-lg" data-aos="fade-up" data-aos-delay="250">Sundar Pichai</p>
+          <p data-aos="fade-up" data-aos-delay="300">Chief Executive Officer @ Google</p>
         </div>
       </div>
     </div>
 
-    <footer class="relative bg-black-noise bg-center text-white">
-      <div class="py-16 sm:py-24 lg:py-32 lg:pt-56">
+    <footer class="relative bg-black-noise bg-center text-white" data-aos="fade-up" data-aos-duration="1500">
+      <div class="py-24 lg:py-32 lg:pt-56">
         <img src="../images/cream-curve-top.png" class="absolute top-0 left-0 w-full">
 
         <div class="mx-auto max-w-md px-4 text-center sm:max-w-3xl sm:px-6 lg:max-w-7xl lg:px-8">
@@ -744,4 +748,8 @@
 
   </div>
 </body>
+
+  <!-- Scripts -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="main.js"></script>
 </html>
