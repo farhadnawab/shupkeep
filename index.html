@@ -145,7 +145,18 @@
         margin-right: 1rem;
         flex-shrink: 0;
       }
-
+      #mobile-dropdown:not(.hide-mobile-dropdown) {
+        @apply duration-150 ease-out opacity-0 scale-95 opacity-100 scale-100;
+      }
+      .hide-mobile-dropdown {
+        @apply duration-100 ease-in opacity-100 scale-100 opacity-0 scale-95;
+      }
+      .accordion-content {
+        display: none;
+      }
+      .accordion-content.active {
+        display: block;
+      }
 
     }
   </style>
@@ -182,7 +193,7 @@
                 </div>
 
                 <div class="flex items-center md:hidden" data-aos="fade-left" data-aos-delay="50">
-                    <button type="button" class="bg-gray-50 rounded-md p-2 inline-flex items-center justify-center text-third hover:text-white hover:bg-fourth focus:outline-none" aria-expanded="false">
+                    <button type="button" class="bg-gray-50 rounded-md p-2 inline-flex items-center justify-center text-third hover:text-white hover:bg-fourth focus:outline-none" aria-expanded="false" onClick="menuToggle()">
                         <span class="sr-only">Open main menu</span>
                         <!-- Heroicon name: outline/menu -->
                         <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
@@ -194,19 +205,10 @@
               </nav>
             </div>
       
-            <!--
-              Mobile menu, show/hide based on menu open state.
-      
-              Entering: "duration-150 ease-out"
-                From: "opacity-0 scale-95"
-                To: "opacity-100 scale-100"
-              Leaving: "duration-100 ease-in"
-                From: "opacity-100 scale-100"
-                To: "opacity-0 scale-95"
-            -->
-            <div class="absolute z-10 top-0 inset-x-0 p-2 transition transform origin-top-right hidden">
+            
+            <div class="absolute z-10 top-0 mt-20 inset-x-0 p-2 transition transform origin-top-right hide-mobile-dropdown" id="mobile-dropdown">
               <div class="relative rounded-lg shadow-md bg-white ring-1 ring-black ring-opacity-5 overflow-hidden">     
-                <button type="button" class="absolute top-0 right-0 p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 focus:outline-none">
+                <button type="button" class="absolute top-0 right-0 p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 focus:outline-none" onClick="menuToggle()">
                   <span class="sr-only">Close menu</span>
                   <!-- Heroicon name: outline/x -->
                   <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
@@ -655,14 +657,14 @@
             <div class="pt-6">
               <dt>
                 <!-- Expand/collapse question button -->
-                <button type="button" class="text-left w-full flex justify-between items-start font-medium text-2xl hover:text-fourth" aria-controls="faq-0" aria-expanded="false">
+                <button type="button" data-href="#faq-0" class="text-left w-full flex justify-between items-start font-medium text-2xl hover:text-fourth accordion-toggle">
                   <span>Is it really unlimited requests?</span>
                   <span class="ml-6 text-3xl">
                     +
                   </span>
                 </button>
               </dt>
-              <dd class="mt-2 pr-12 hidden" id="faq-0">
+              <dd class="mt-2 pr-12 accordion-content" id="faq-0">
                 <p>I don&#039;t know, but the flag is a big plus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas cupiditate laboriosam fugiat.</p>
               </dd>
             </div>
@@ -671,14 +673,14 @@
             <div class="pt-6">
               <dt>
                 <!-- Expand/collapse question button -->
-                <button type="button" class="text-left w-full flex justify-between items-start font-medium text-2xl hover:text-fourth" aria-controls="faq-1" aria-expanded="false">
+                <button type="button" data-href="#faq-1" class="text-left w-full flex justify-between items-start font-medium text-2xl hover:text-fourth accordion-toggle">
                   <span>How fast will I receive my site?</span>
                   <span class="ml-6 text-3xl">
                     +
                   </span>
                 </button>
               </dt>
-              <dd class="mt-2 pr-12 hidden" id="faq-1">
+              <dd class="mt-2 pr-12 accordion-content" id="faq-1">
                 <p>I don&#039;t know, but the flag is a big plus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas cupiditate laboriosam fugiat.</p>
               </dd>
             </div>
