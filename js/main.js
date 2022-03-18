@@ -1,4 +1,6 @@
-AOS.init();
+AOS.init({
+  once: true,
+});
 
 function menuToggle(){
     document.getElementById('mobile-dropdown').classList.toggle('hide-mobile-dropdown');
