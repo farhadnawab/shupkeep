@@ -7,17 +7,11 @@ function menuToggle(){
 }
 
 // Listen for click on the document
-document.addEventListener('click', function (event) {
-  
-    //Bail if our clicked element doesn't have the class
-    if (!event.target.classList.contains('accordion-toggle')) return;
+function accordionToggle(id) {
     
     // Get the target content
-    var content = document.querySelector(event.target.getAttribute("data-href"));
+    var content = document.querySelector(id);
     if (!content) return;
-    
-    // Prevent default link behavior
-    event.preventDefault();
     
     // If the content is already expanded, collapse it and quit
     if (content.classList.contains('active')) {
@@ -33,4 +27,4 @@ document.addEventListener('click', function (event) {
     
     // Toggle our content
     content.classList.toggle('active');
-  })
+  }
