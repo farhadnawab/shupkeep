@@ -12,6 +12,14 @@ tailwind.config = {
         fontFamily: {
             clash: 'clashdisplay',
         },
+        width: {
+          '122px': '122px',
+          '144px': '144px',
+          '150px': '150px',
+          '185px': '185px',
+          '316px': '316px',
+          '325px': '325px',
+        },
         minWidth: {
           '300px': '300px',
         },
